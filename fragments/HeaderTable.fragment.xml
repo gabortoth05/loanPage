@@ -1,0 +1,78 @@
+<core:FragmentDefinition 
+xmlns:core="sap.ui.core" 
+xmlns="sap.m"
+controllerName="c">
+
+	
+	<Table 
+		inset="false"
+		items="">
+		<columns>
+			<Column width="12em">
+				<Text text="Location" />
+			</Column>
+			<Column >
+				<Text text="User ID" />
+			</Column>
+			<Column >
+				<Text text="Transaction ID" />
+			</Column>
+			<Column >
+				<Text text="Date" />
+			</Column>
+			<Column >
+				<Text text="NB Form" />
+			</Column>
+			<Column >
+				<Text text="Amount" />
+			</Column>
+			<Column >
+				<Text text="Refund Gross" />
+			</Column>
+			<Column >
+				<Text text="Fee" />
+			</Column>
+			<Column >
+				<Text text="Refund Net" />
+			</Column>
+			<Column >
+				<Text text="Status" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+	
+					<Text text="ORY T2" />
+					<Text text="Wu TING" />
+					<Text text="Wu TING" />
+					<Text text="Wu TING" />
+					<Text text="Wu TING" />
+					<Text text="Wu TING" />
+					<Text text="Wu TING" />
+					<Text text="Wu TING" />
+					<Text text="Pending" />
+	
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
+</core:FragmentDefinition>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

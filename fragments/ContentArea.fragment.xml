@@ -1,0 +1,190 @@
+<core:FragmentDefinition 
+xmlns:core="sap.ui.core" 
+xmlns="sap.m"
+xmlns:l="sap.ui.layout"
+xmlns:f="sap.ui.layout.form"
+xmlns:html="http://www.w3.org/1999/xhtml"
+controllerName="com.olit.lazyapp.controller.master">
+	<l:BlockLayout id="BlockLayout" background="{/selectedBackground}">
+			<l:BlockLayoutRow accentCells="Accent1">
+				<l:BlockLayoutCell width="1">
+					
+					<VBox>
+						<Input placeholder="Scan Passport" class="" />
+						<f:Form id="FormChange354"
+									editable="true">
+									<f:title>
+										<core:Title text="Traveller Information" />
+									</f:title>
+									<f:layout>
+										<f:ResponsiveGridLayout
+											labelSpanXL="3"
+											labelSpanL="3"
+											labelSpanM="3"
+											labelSpanS="12"
+											adjustLabelSpan="false"
+											emptySpanXL="0"
+											emptySpanL="0"
+											emptySpanM="0"
+											emptySpanS="0"
+											columnsXL="1"
+											columnsL="1"
+											columnsM="1"
+											singleContainerFullSize="false" />
+									</f:layout>
+									<f:formContainers>
+										<f:FormContainer>
+											<f:formElements>
+												<f:FormElement label="Passport ID">
+													<f:fields>
+														<Input value="" />
+													</f:fields>
+												</f:FormElement>
+												<f:FormElement label="First Name">
+													<f:fields>
+														<Input value="" />
+													</f:fields>
+												</f:FormElement>
+												<f:FormElement label="Last Name">
+													<f:fields>
+														<Input value="" />
+													</f:fields>
+												</f:FormElement>
+												<f:FormElement label="Issuing Country">
+													<f:fields>
+														<Input value="" />
+													</f:fields>
+												</f:FormElement>
+												<f:FormElement label="Birthdate">
+													<f:fields>
+														<Input value="" description="(age)"/>
+													</f:fields>
+												</f:FormElement>
+
+
+											</f:formElements>
+										</f:FormContainer>
+									</f:formContainers>
+								</f:Form>
+								
+								<Button width="100%" text="Signature" class=""/>
+								<Button width="100%" text="Print ticket" class=""/>
+								<Button width="100%" text="Cash-out (price)" class=""/>
+					</VBox>
+					
+					
+				</l:BlockLayoutCell>
+				<l:BlockLayoutCell width="3" >
+				
+					<VBox>
+						<Toolbar class="sapUiSmallMarginTop" id="toolbar2">
+							<Button text="Manual Input" press="onAddNewLine"/>
+							<ToolbarSpacer/>
+							<Button text="XML File" />
+						</Toolbar>
+						
+						<Table 
+							id="contentTable"
+							items="{
+							path: 'tableModel>/'
+							}">
+							<columns>
+								<Column width="30px">
+									<Text text="Num" />
+								</Column>
+								<Column >
+									<Text text="VRO Name" />
+								</Column>
+								<Column >
+									<Text text="Form ID" />
+								</Column>
+								<Column >
+									<Text text="Country" />
+								</Column>
+								<Column >
+									<Text text="Amount" />
+								</Column>
+								<Column >
+									<Text text="Refund Gross" />
+								</Column>
+								<Column >
+									<Text text="Fee" />
+								</Column>
+								<Column >
+									<Text text="Refund Net" />
+								</Column>
+								<Column width="30px">
+									<Text text="Type" />
+								</Column>
+								<Column width="30px">
+									<Text text="VRO" />
+								</Column>
+								<Column width="47px">
+									<Text text="Custom" />
+								</Column>
+								<Column width="30px">
+									<Text text="" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+						
+										<Text class="" text="{path: 'tableModel>NUM'}" />
+										<Select visible="{path: 'tableModel>VISIBLE'}" enabled="{path: 'tableModel>EDITABLE'}" selectedKey="" items="">
+											<core:Item key="" text="" />
+										</Select>
+										<Input visible="{path: 'tableModel>VISIBLE'}" editable="{path: 'tableModel>EDITABLE'}" value="{path: 'tableModel>DETAILID'}" />
+										<Select visible="{path: 'tableModel>VISIBLE'}" enabled="{path: 'tableModel>EDITABLE'}" >
+											<core:Item key="" text="France" />
+										</Select>
+										<Input editable="{path: 'tableModel>EDITABLE'}" description="EUR" value="{path: 'tableModel>ORIGINALAMOUNT'}" />
+										<Input editable="{path: 'tableModel>EDITABLE'}" description="EUR" value="{path: 'tableModel>REFUDGROSS'}" />
+										<Input editable="{path: 'tableModel>EDITABLE'}" description="EUR" value="{path: 'tableModel>REFUNDFEE'}" />
+										<Input editable="{path: 'tableModel>EDITABLE'}" description="EUR" value="{path: 'tableModel>EXTINVOICED'}" />
+										<core:Icon src="{path: 'tableModel>REFUNDTYPE', formatter:'com.olit.lazyapp.utils.Formatter.getRefundIcon'}" tooltip="cash"/>
+										
+										<core:Icon 
+										src="{path: 'tableModel>STATUSBRO', formatter:'com.olit.lazyapp.utils.Formatter.getStatusIcon'}" 
+										color="{path: 'tableModel>STATUSBRO', formatter:'com.olit.lazyapp.utils.Formatter.getIconColor'}" 
+										press="onChangeStatus"/>
+										
+										<core:Icon width="30px"
+										src="{path: 'tableModel>STATUSCUSTOM', formatter:'com.olit.lazyapp.utils.Formatter.getCustomIcon'}" 
+										color="{path: 'tableModel>STATUSCUSTOM', formatter:'com.olit.lazyapp.utils.Formatter.getIconColor'}"
+										press="onChangeStatus"/>
+										
+										<Button visible="{path: 'tableModel>DELETABLE'}" icon="sap-icon://delete" press="onDeleteEntry"/>
+						
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						<Toolbar class="" >
+							<ToolbarSpacer/>
+							<Button id="tableSaveButton" text="Save" visible="false" press="onSaveEntry" />
+						</Toolbar>
+
+					</VBox>
+				</l:BlockLayoutCell>
+			</l:BlockLayoutRow>
+		</l:BlockLayout>
+
+</core:FragmentDefinition>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

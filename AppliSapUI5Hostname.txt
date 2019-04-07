@@ -1,0 +1,28 @@
+{
+	"Services": {
+		"sapprtdev-v1.dvp.adp.fr": {
+			"url": "VDORYSIDVECC2.dvp.adp.fr"
+		},
+		"sapprtqal-v1.dvp.adp.fr": {
+			"url": "VDORYSIQLECC2.dvp.adp.fr"
+		},
+		"sapprtref-v1.dvp.adp.fr": {
+			"url": "sapeccref-v1.dvp.adp.fr"
+		},
+		"sapprtval-v1.prod.adp.fr": {
+			"url": "sapvalecc.prod.adp.fr"
+		},
+		"sapprtval-v2.prod.adp.fr": {
+			"url": "sapvalecc.prod.adp.fr"
+		},
+		"sapprtpro-v1.prod.adp.fr": {
+			"url": "sapproecc.prod.adp.fr"
+		},
+		"webidetesting4777074-p1941471247trial.dispatcher.hanatrial.ondemand.com": {
+			"url": ""
+		},
+		"localhost": {
+			"url": "test.localhost"
+		}
+	}
+}

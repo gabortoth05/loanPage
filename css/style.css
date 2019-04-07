@@ -1,0 +1,97 @@
+/*Overwrite standard controll style*/
+
+.sapMOH{
+	padding: 0px !important;
+}
+
+.sapMObjectNumberLarge .sapMObjectNumberText, .sapMObjectNumberLarge .sapMObjectNumberUnit{
+	width:33.33%,;
+	color: white;
+	font-size: 1.35rem !important;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+/*Custom classes*/
+
+.customBox{
+	background-color: #85bf4b;
+	padding: 5px;
+	box-shadow: 1px 3px 10px #025928;
+}
+
+
+.customBoxLabel{
+	color: #fff;
+}
+
+.customBoxText{
+	color: #fff;
+	
+}
+
+.customBoxText .sapMOHTitle h1 .sapMText{
+	color: #fff;
+	
+}
+
+.customBoxText .sapMOH .sapMOHAttr .sapMObjectAttributeTitle, .sapMOH .sapMOHAttr .sapMObjectAttributeText, .sapMOH .sapMOHAttr .sapMObjectAttributeColon{
+	color: #fff !important;
+}
+
+.sapMBtn:hover > .sapMBtnHoverable{
+	background-color: #1c4866;
+}
+
+.sideBlock{
+	background-color: #f27b35;
+	box-shadow: 1px 2px 10px #fa4848; 
+}
+
+.bottomBlock{
+	background-color: #fff;
+	box-shadow: 1px 2px 10px #5e5528
+}
+
+.reducedBox{
+	font-size: 12px !important;
+}
+
+.eContainer{
+	width: 33%
+	
+}
+
+.sapMBtnInner{
+	color: #fff;
+	text-shadow: 0 0 0.125rem #ffffff;
+	background-color: #2B75A8;
+}
+
+#mapid { 
+	height: 80vh; 
+}
+
+.sapUiBlockLayoutSizeXL:not(.sapUiBlockLayoutKeepFontSize) .sapUiBlockCellContent{
+	padding: 0rem 1rem;
+	margin: auto;
+}
+
+.sapMQuickViewPage .sapUiHLayout{
+	margin-bottom: 0px !important;
+}
+
+.sapMQuickViewPage .sapMQuickViewThumbnail{
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	
+}
+
+
+/*Hide the header part to save space*/
+.sapMPanelWrappingDiv.sapMPanelWrappingDivExpanded{
+	display: none !important;
+}
+

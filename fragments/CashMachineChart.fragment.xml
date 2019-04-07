@@ -1,0 +1,58 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+						 controllerName="com.olit.lazyapp.controller.master"
+						 xmlns="sap.m" xmlns:layout="sap.ui.layout"
+						 xmlns:viz="sap.viz.ui5.controls"
+						 xmlns:viz.data="sap.viz.ui5.data"
+						 xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+						 xmlns:data="sap.chart.data">
+    <Dialog id="headerPopup" horizontalScrolling="true" showHeader="true" state="Error" stretch="false" title="Refill needed" type="Standard" verticalScrolling="true">
+        <content>
+            <layout:VerticalLayout width="100%" visible="true">
+                <layout:content>
+                    <ObjectListItem intro="" title="CDG0101-24" icon="sap-icon://collections-insight" number="450" numberUnit="Eur" numberState="Error" type="Active" selected="false" showMarkers="false">
+                        <attributes/>
+                        <firstStatus/>
+                        <secondStatus/>
+                    </ObjectListItem>
+                    
+                    
+				<viz:Popover id="idPopOver"></viz:Popover>
+				            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+				                height='100%' width="100%" vizType='column'>
+				                <viz:dataset>
+				                    <viz.data:FlattenedDataset data="{/milk}">
+				                        <viz.data:dimensions>
+				                            <viz.data:DimensionDefinition name="Week"
+				                                value="{Week}" />
+				                        </viz.data:dimensions>
+				                        <viz.data:measures>
+				                            <viz.data:MeasureDefinition name="Revenue"
+				                                value="{Revenue}" />
+				                            <viz.data:MeasureDefinition name="Cost"
+				                                value="{Cost}" />
+				                        </viz.data:measures>
+				                    </viz.data:FlattenedDataset>
+				                </viz:dataset>
+				
+				                <viz:feeds>
+				                    <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
+				                        values="Revenue" />
+				                    <viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension"
+				                        values="Week" />
+				                </viz:feeds>
+				            </viz:VizFrame>
+
+
+
+                </layout:content>
+            </layout:VerticalLayout>
+        </content>
+        <beginButton/>
+        <buttons>
+            <Button text="OK" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="onClosePopup"/>
+        </buttons>
+        <customHeader/>
+        <endButton/>
+        <subHeader/>
+    </Dialog>
+</core:FragmentDefinition>

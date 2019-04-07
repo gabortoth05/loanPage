@@ -1,0 +1,422 @@
+<core:View xmlns:core="sap.ui.core"
+		   xmlns="sap.m"
+		   xmlns:f="sap.f"
+		   xmlns:l="sap.ui.layout"
+		   xmlns:fb="sap.ui.comp.filterbar"
+		   xmlns:vm="sap.ui.comp.variants"
+		   xmlns:ch="sap.suite.ui.microchart"
+		   xmlns:ext="com.olit.lazyapp.utils"
+		   controllerName="com.olit.lazyapp.controller.master"
+		   height="100%"
+>
+<Page showHeader="false">
+<l:BlockLayout>
+
+	<l:BlockLayoutRow>
+		<l:BlockLayoutCell class="sideBlock" width="1" id="headerSection1" backgroundColorSet="" backgroundColorShade="">
+			<Text class="reducedBox customBoxText" text="SUMMEN AV OPPLYSNINGER PA DENNE SIDEN ER KOMPLETT SALGSOPPGAVE FOR" />
+				<ObjectHeader
+					class="customBoxText"
+					binding=""
+					title="Tjodolvs gate 4"
+					 >
+					<attributes>
+						<ObjectAttribute text="Valand" />
+						<ObjectAttribute text="4010, Rogaland" />
+					</attributes>
+				</ObjectHeader>
+				
+				<ObjectNumber
+				class="sapMObjectNumberLarge"
+				number="2.390.000,-"
+				emphasized="false"
+				state="None" />
+			
+			<Text class="reducedBox customBoxText" text="Kjekk og praktisk leilighet pa Valand med nyere bad (2015), todelt stue m. peis og nydelig
+			uteomrade. Parkering pa tomt." />
+			
+		</l:BlockLayoutCell>
+		
+		<l:BlockLayoutCell width="2" id="headerSection2" backgroundColorSet="" backgroundColorShade="">
+		<VBox>
+			<HBox class="">
+				<VBox width="33%" class="sapUiSmallMargin customBox">
+					<Label text="PRISANTYDNING" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+					<ObjectAttribute text="2.390.000,-" class="customBoxLabel"/>
+				</VBox>	
+				<VBox width="33%" class="sapUiSmallMargin customBox">
+					<Label text="TYPE" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+					<ObjectAttribute text="Leilighet" class="customBoxLabel"/>
+				</VBox>	
+				<VBox width="33%" class="sapUiSmallMargin customBox">
+					<Label text="EIERFORM" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+					<ObjectAttribute text="Eierseksjon" class="customBoxLabel"/>
+				</VBox>	
+			</HBox>
+			<HBox class="">
+				<VBox width="33%" class="sapUiSmallMargin customBox">
+					<Label text="PRIMAERROM" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+					<ObjectAttribute text="56m2" class="customBoxLabel"/>
+				</VBox>	
+				<VBox width="33%" class="sapUiSmallMargin customBox">
+					<Label text="BRUKSAREAL" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+					<ObjectAttribute text="-" class="customBoxLabel"/>
+				</VBox>	
+				<VBox width="33%" class="sapUiSmallMargin customBox">
+					<Label text="BRUTTOAREAL" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+					<ObjectAttribute text="-" class="customBoxLabel"/>
+				</VBox>	
+			</HBox>
+			<HBox class="">
+				<VBox width="33%" class="sapUiSmallMargin customBox">
+					<Label text="TOMT" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+					<ObjectAttribute text="242M2" class="customBoxLabel"/>
+				</VBox>	
+				<VBox width="33%" class="sapUiSmallMargin customBox">
+					<Label text="SOVEROM" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+					<ObjectAttribute text="1" class="customBoxLabel"/>
+				</VBox>	
+				<VBox width="33%" class="sapUiSmallMargin customBox">
+					<Label text="ETASJE" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+					<ObjectAttribute text="-" class="customBoxLabel"/>
+				</VBox>	
+			</HBox>
+		</VBox>	
+			
+		
+		</l:BlockLayoutCell>
+		
+		<l:BlockLayoutCell class="sideBlock" width="1" id="headerSection3" backgroundColorSet="" backgroundColorShade="">
+			<Text class="reducedBox customBoxText" text="SUMMEN AV OPPLYSNINGER PA DENNE SIDEN ER KOMPLETT SALGSOPPGAVE FOR" />
+			
+				<ObjectHeader
+					binding=""
+					title="Tjodolvs gate 4"
+					class="customBoxText"
+					 >
+					<attributes>
+						<ObjectAttribute text="Valand" />
+						<ObjectAttribute text="4010, Rogaland" />
+					</attributes>
+				</ObjectHeader>
+				
+				<ObjectNumber
+				class="sapMObjectNumberLarge"
+				number="2.390.000,-"
+				emphasized="false"
+				state="None" />
+			
+			<Text class="reducedBox customBoxText" text="Kjekk og praktisk leilighet pa Valand med nyere bad (2015), todelt stue m. peis og nydelig
+			uteomrade. Parkering pa tomt." />
+		</l:BlockLayoutCell>
+	
+	</l:BlockLayoutRow>
+	
+	<l:BlockLayoutRow>
+		<l:BlockLayoutCell id="headerSection4" class="bottomBlock" width="1" backgroundColorSet="" backgroundColorShade="">
+			<Title text="" />
+			<List >
+				<DisplayListItem id="Button1" label="Komplett salgsoppgave" type="Navigation" press="onListItemPress"/>
+				<DisplayListItem id="Button2" label="Viktig informasjon" type="Navigation" press="onListItemPress"/> 
+				<DisplayListItem id="Button3" label="Nabolagsprofil" type="Navigation" press="onListItemPress"/> 
+				<DisplayListItem id="Button4" label="Kart" type="Navigation" press="onListItemPress"/> 
+				<DisplayListItem id="Button5" label="Finansiering" type="Navigation" press="onListItemPress"/> 
+			</List>
+			<VBox>
+				<Button width="100%" text="Jeg onsker a holdes oppdatert ifbm. salget av denne eiendommen" />
+				<Button width="100%" text="Fa boligens solgtpris" />
+				<Button width="100%" text="Gi bud" />
+				<Button width="100%" text="Om komplett salgsoppgave" />
+			</VBox>
+				
+				
+			
+		</l:BlockLayoutCell>
+		
+		<l:BlockLayoutCell id="headerSection5" width="2" backgroundColorSet="" backgroundColorShade="">
+		
+				<Panel id="showMorePanel" expanded="false" expandable="true" expand="onExpandPanel">
+					<headerToolbar>
+						<Toolbar>
+						<Title text="Se mir" />						
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<VBox>
+							<HBox class="">
+								<VBox width="100%" class="sapUiSmallMargin customBox">
+									<Label text="TOTALPRIS INKLUSIV OMKOSTNINGER" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+									<ObjectAttribute text="2.460.872,-" class="customBoxLabel"/>
+								</VBox>	
+							</HBox>
+							<HBox class="">
+								<VBox width="50%" class="sapUiSmallMargin customBox">
+									<Label text="OMKOSTNINGER" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+									<ObjectAttribute text="70.872,-" class="customBoxLabel"/>
+								</VBox>	
+								<VBox width="50%" class="sapUiSmallMargin customBox">
+									<Label text="FELLESUTGIFTER" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+									<ObjectAttribute text="-" class="customBoxLabel"/>
+								</VBox>	
+							</HBox>
+							<HBox class="">
+								<VBox width="50%" class="sapUiSmallMargin customBox">
+									<Label text="LIGNINGSVERDI" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+									<ObjectAttribute text="989.240,-" class="customBoxLabel"/>
+								</VBox>	
+								<VBox width="50%" class="sapUiSmallMargin customBox">
+									<Label text="GARDSNR." design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+									<ObjectAttribute text="56" class="customBoxLabel"/>
+								</VBox>	
+							</HBox>
+							<HBox class="">
+								<VBox width="50%" class="sapUiSmallMargin customBox">
+									<Label text="BRUKSNR." design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+									<ObjectAttribute text="1728" class="customBoxLabel"/>
+								</VBox>	
+								<VBox width="50%" class="sapUiSmallMargin customBox">
+									<Label text="BYGGEAR" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+									<ObjectAttribute text="1901" class="customBoxLabel"/>
+								</VBox>	
+							</HBox>
+							<HBox class="">
+								<VBox width="100%" class="sapUiSmallMargin customBox">
+									<Label text="ENERGIMERKING" design="Bold" class="sapUiSmallMarginTop customBoxLabel"/>
+									<ObjectAttribute text="1728" class="customBoxLabel"/>
+								</VBox>	
+							</HBox>
+						</VBox>	
+					</content>
+					
+				</Panel>
+				<Panel id="mainPanel" expanded="true" expandable="true" >
+					<content>
+					
+					<NavContainer
+						id="navCon"
+						width="98%"
+						height="16em"
+						class="navContainerControl sapUiSmallMarginBottom">
+						<Page id="p1" showHeader="false">
+							<Carousel >
+								<pages>
+									<Image src="http://placehold.it/200x200" />
+									<Image src="http://placehold.it/200x200" />
+									<Image src="http://placehold.it/200x200" />
+								</pages>
+							</Carousel>
+						</Page>
+						<Page id="p2" showHeader="false">
+							<Title text="Viktig informasjon" />
+							
+							<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, 
+							sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+							sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+							Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+							invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, 
+							consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+							aliquyam erat" />
+							
+							<Title text="Sub-Title" titleLevel="H5" />
+							
+							<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, 
+							sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+							sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+							" />
+							
+							
+						</Page>
+						<Page id="p3" showHeader="false">
+							<Title text="Viktig informasjon 2" />
+							
+							<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, 
+							sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+							sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+							Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+							invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, 
+							consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+							aliquyam erat" />
+							
+							<Title text="Sub-Title 2" titleLevel="H5" />
+							
+							<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, 
+							sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+							sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+							" />
+						
+						
+						</Page>
+						<Page
+							id="p4" showHeader="false">
+							
+							<ext:leafletExtension />
+						</Page>
+						
+						<Page id="p5" showHeader="false">
+						<VBox>
+							
+							
+							<List  mode="" items="" >
+								<CustomListItem>
+									<HBox>
+										<core:Icon size="2rem" src="sap-icon://pdf-attachment" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+										<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
+											<Link text="PDF Attachment" target="" press="handlePress"/>
+											<Label text="This is the attachment description."/>
+										</VBox>
+									</HBox>
+									<HBox>
+										<core:Icon size="2rem" src="sap-icon://pdf-attachment" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+										<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
+											<Link text="PDF Attachment" target="" press="handlePress"/>
+											<Label text="This is the attachment description."/>
+										</VBox>
+									</HBox>
+									<HBox>
+										<core:Icon size="2rem" src="sap-icon://pdf-attachment" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+										<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
+											<Link text="PDF Attachment" target="" press="handlePress"/>
+											<Label text="This is the attachment description."/>
+										</VBox>
+									</HBox>
+								</CustomListItem>
+							</List>
+			
+						</VBox>	
+						</Page>
+						
+						<Page id="p6" class="viewCard" showHeader="false">
+						
+							<QuickViewCard id="quickViewCard"
+							navigate="onNavigate"
+							afterNavigate="onAfterNavigate">
+								<QuickViewPage
+										pageId="{pageId}"
+										header="Karoline Mauland"
+										icon="http://placehold.it/200x200"
+										title="Einendomsmeglerfullmektig"
+										titleUrl="Title url"
+										description="Description"
+										>
+								</QuickViewPage>
+							</QuickViewCard>
+							<VBox>
+							
+							<Button width="100%" icon="sap-icon://iphone" text="46 44 56 95" />
+							<Button width="100%" icon="sap-icon://email" text="kmauland@privatemegnelen.com" />
+							<Button width="100%" icon="" text="Lagre visittkort" />
+							<Button width="100%" icon="" text="Selge Boling?" />
+							
+							</VBox>			
+						</Page>
+						
+					</NavContainer>
+					
+						
+					</content>
+				</Panel>
+
+		
+		</l:BlockLayoutCell>
+		
+		<l:BlockLayoutCell id="headerSection6" class="bottomBlock" width="1" backgroundColorSet="" backgroundColorShade="">
+				<NavContainer
+						id="leftNavigation"
+						width="98%"
+						height="16em"
+						class="navContainerControl sapUiSmallMarginBottom">
+						<Page id="leftP1" showHeader="false">
+							
+							<VBox>
+							<Title class="sapUiSmallMarginBottom" text="Reserver en andel i lanet her" />
+							
+							<Title class="sapUiSmallMarginBottom" text="Andeler á 100.000 NOK" />
+							
+							<Input class="sapUiSmallMarginBottom"  placeholder="Antall andeler (Minst 1)" />
+							
+							<Button class="sapUiSmallMarginBottom"  width="100%" text="Bekreft Reservasjon" />
+							
+							<Text text="En reservasjon er en ikke-bindende melding som formidles til Oblinor. For avtalen er bindene ma du signere laneactalen, som blir sendt til din resitrerte e-postadresse, etter reservasjonen. Ved sporsmal, kontakt kundeservice pa tlf.: 916 03 002" />
+							
+							</VBox>
+							
+							
+						</Page>
+						<Page id="leftP2">
+							<Title text="Viktig informasjon" />
+							
+							<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, 
+							sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+							sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+							Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+							invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, 
+							consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+							aliquyam erat" />
+							
+							<Title text="Sub-Title" titleLevel="H5" />
+							
+							<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, 
+							sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+							sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+							" />
+							
+							
+						</Page>
+						
+					</NavContainer>
+		</l:BlockLayoutCell>
+	
+	</l:BlockLayoutRow>
+
+</l:BlockLayout>
+</Page>
+
+
+
+
+<!-- 			<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange"> -->
+<!-- 				<detailPages> -->
+<!-- 					<Page title="List of Products"> -->
+<!-- 						<content> -->
+
+							
+<!-- 						</content> -->
+<!-- 						<footer> -->
+<!-- 							<Toolbar> -->
+								
+<!-- 							</Toolbar> -->
+<!-- 						</footer> -->
+<!-- 					</Page>				 -->
+<!-- 				</detailPages> -->
+<!-- 				<masterPages> -->
+<!-- 					<Page title="List of Products"> -->
+<!-- 						<content> -->
+<!-- 							<List id="masterlist" items="{path: '/Products'}" growing='true'> -->
+<!-- 								<ObjectListItem -->
+<!-- 									icon="sap-icon://account" -->
+<!-- 									type="Active" -->
+<!-- 									press="onToPage2" -->
+<!-- 									title="{ProductID} - {ProductName}" -->
+<!-- 									number="{UnitPrice}" -->
+<!-- 									numberUnit="EUR" > -->
+<!-- 									<attributes> -->
+<!-- 										<ObjectAttribute text="{UnitsInStock}" /> -->
+<!-- 									</attributes> -->
+<!-- 								</ObjectListItem> -->
+<!-- 							</List> -->
+							
+							
+<!-- 						</content> -->
+<!-- 						<footer> -->
+<!-- 							<Toolbar> -->
+								
+<!-- 							</Toolbar> -->
+<!-- 						</footer> -->
+<!-- 					</Page> -->
+<!-- 				</masterPages> -->
+<!-- 			</SplitApp> -->
+
+</core:View>
